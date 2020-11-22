@@ -1,0 +1,32 @@
+{% extends "layout.njk" %}
+
+    {% block head %}
+
+        <title>Foodfy - Chefes</title>
+
+    {% endblock head %}
+
+    {% block content %}
+
+    <div id="newChef">
+        <a href="/chefs/create">Cadastrar Novo Chef</a>
+    </div>
+
+    <section class="list-chef">
+        {% for chef in chefs %}
+            <div class="chef-container">
+                <div>
+                    <span style="background-image: url('{{ chef.avatar }}');"></span>
+                </div>
+                <div>
+                    <h1>{{ chef.name }}</h1>
+                    <a href="/chefs/show/{{ chef.id }}">Visualizar</a>
+                </div>
+                <div>
+                    <p>{{ chef.totrecipes }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </section>
+
+    {% endblock content %}

@@ -1,0 +1,58 @@
+{% extends "layout.njk" %}
+
+
+{% block content %}
+
+    <div class="item-container">
+        <section class="img" style="background: url({{ files[0].src }}) no-repeat center center / cover;">
+        </section>
+            
+        <section>
+            <div class="item">
+
+                <h1>Nome da Receita</h1>
+                <p>{{ recipe.title }}</p>
+
+                <h1>Imagens</h1>
+                <div class="photos-preview">
+                    {% for file in files %}
+                        <div class="photos" id="{{ file.id }}">
+                            <img src="{{ file.src }}" alt="{{ file.name }}">
+                            <i class="material-icons" onclick="showImage.handleChangeImage(event)">expand</i>
+                        </div>
+                    {% endfor %}
+                </div>
+
+                <h1>Autor da Receita</h1>
+                <p>{{ recipe.author }}</p>
+
+                <h1>Ingredientes</h1>
+                {% for ingredient in recipe.ingredients %}
+                    {% if ingredient != "" %}
+                        <p>» {{ ingredient }}</p>
+                    {% endif %}
+                {% endfor %}
+
+                <h1>Modo de Preparo</h1>
+                {% for preparation in recipe.preparation %}
+                    {% if preparation != "" %}
+                        <p>» {{ preparation }}</p>
+                    {% endif %}
+                {% endfor %}
+
+                <h1>Informações Adicionais</h1>
+                <p>{{ recipe.information }}</p>
+
+                {% if (recipe.user_id and recipe.user_id == userId) or (userAdm.is_admin) %}
+                <div id="editBtn">
+                    <a href="/admin/edit/{{ recipe.id }}">Editar</a>
+                </div>
+                {% endif %}
+
+            </div>
+        </section>
+    </div>
+
+    <script src="/scriptsImage.js"></script>
+
+{% endblock content %}

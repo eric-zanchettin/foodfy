@@ -1,0 +1,15 @@
+{% extends "layout-users.njk" %}
+
+{% block content %}
+
+<section class="login container">
+
+    <form method="POST" action="/users/login">
+
+        {% include "users/login/fields.njk" %}
+
+    </form>
+
+</section>
+
+{% endblock %}

@@ -1,0 +1,153 @@
+/* LOGIN */
+
+.usersFoodfy {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.usersFoodfy img {
+    margin: auto;
+    padding: 0;
+}
+
+div.header {
+    text-align: center;
+    margin: 20px 0px 40px 0px;
+}
+
+div.fields {
+    margin: 40px auto;
+    padding: 20px 80px 20px 80px;
+
+    width: 40%;
+    height: auto;
+
+    background: #fdfdfd;
+}
+
+div.fields div p {
+    font-weight: bolder;
+    padding: 0px 0px 2px 0px;
+}
+
+div.fields div input {
+    padding: 12px;
+    width: 100%;
+
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 4px;
+}
+
+div.fields .buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+div.fields a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: gray;
+}
+
+div.fields a.button {
+    color: white;
+    background-color: #6558c3;
+    padding: 8px 32px;
+    border-radius: 6px;
+}
+
+/* REGISTER */
+
+div.registerHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.fieldsRegister {
+    margin: 40px auto;
+    padding: 20px 80px 20px 80px;
+
+    width: 60%;
+    height: auto;
+
+    background: #fdfdfd;
+}
+
+div.fieldsRegister div p {
+    font-weight: bolder;
+    padding: 0px 0px 2px 0px;
+}
+
+div.fieldsRegister div input.separate {
+    padding: 12px;
+    width: 45%;
+
+    border: 1px solid rgb(187, 187, 187);
+    border-radius: 4px;
+}
+
+div.fieldsRegister .buttons {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+div.fieldsRegister a {
+    text-decoration: none;
+    font-weight: bolder;
+    color: gray;
+}
+
+div.fieldsRegister button {
+    font-weight: bolder;
+    color: white;
+    background-color: #6558c3;
+    padding: 8px 32px;
+    border-radius: 6px;
+}
+
+div.titles {
+    display: flex;
+    justify-content: unset;
+    align-items: center;
+}
+
+div.titles p:last-child {
+    margin: 0px 0px 0px 550px;
+}
+
+div.fieldRegister {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.isAdmin {
+    display: flex;
+    align-items: center;
+}
+
+div.isAdmin label {
+    margin: 32px 0px 0px 10px;
+    font-weight: bolder;
+}
+
+
+div.isAdmin input {
+    padding: 20px;
+    margin-top: 30px;
+}
+
+button.button {
+    font-weight: bolder;
+    color: white;
+    background-color: #6558c3;
+    padding: 8px 32px;
+    border-radius: 6px;
+}

@@ -1,0 +1,15 @@
+{% extends "layout-logged.njk" %}
+
+{% block content %}
+
+    <section>
+
+        <form method="POST" action="/users">
+
+            {% include "users/logged/fields.njk" %}
+
+        </form>
+
+    </section>
+
+{% endblock %}

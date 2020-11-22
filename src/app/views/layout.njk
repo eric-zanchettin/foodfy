@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% include "parts/styles.njk" %}
+    <title>Foodfy</title>
+</head>
+<body>
+
+    {% include "parts/messages.njk" %}
+
+    <header>
+        
+        <div class="userHeader">
+
+            <ul class=userNav>
+                <li>
+                    <a href="/"><img class="userLogo" src="https://i.imgur.com/i7stcXt.png" alt="Foodfy Logo"></a>
+                </li>
+
+                <li>
+                    <a href="/admin">Receitas</a>
+                </li>
+
+                <li>
+                    <a href="/chefs">Chefs</a>
+                </li>
+
+                <li>
+                   <a href="/users/index">Usuários</a>
+                </li>
+
+                <li>
+                    {% if session.isAdmin %}
+                        <a href="/users/list">Listagem</a>
+                    {% endif %}
+                </li>
+
+                <form method="POST" action="/users/logout">
+                    <li>
+                        <button class="logout" type="submit">Sair</button>
+                    </li>
+                </form>
+            </ul>
+
+        </div>
+
+    </header>
+
+    {% block content %}
+
+    {% endblock %}
+
+    <script src="/scripts.js"></script>
+
+</body>
+</html>

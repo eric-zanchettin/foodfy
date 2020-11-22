@@ -1,0 +1,27 @@
+<div class="fields">
+    
+    <div class="header">
+        <h1>Iniciar Sessão</h1>
+    </div>
+
+    <div>
+        <p>Email</p>
+        <input type="email" name="email" placeholder="Digite o E-mail ..." value="{{ login.email }}" onblur="validateEmail.validate(value)" />
+    </div>
+
+    <div>
+        <p>Senha</p>
+        <input type="password" name="password" placeholder="Digite sua Senha ...">
+    </div>
+
+    <div class="buttons">
+
+    <a href="/users/forgot-password">Esqueceu sua Senha?</a>
+
+    <button type="submit" class="button">Acessar</a>
+
+    </div>
+
+    <input type="hidden" name="token" value="{{ token }}" />
+    
+</div>

@@ -1,0 +1,41 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Painel Administrativo</title>
+
+{% endblock head %}
+
+{% block content %}
+
+    <div id="newRec">
+        <a href="/admin/create">Cadastrar Nova Receita</a>
+    </div>
+
+    <form class="filter" method="GET" action="/admin">
+        <input class="filter-input" placeholder="Procure por uma Receita ..." type="text" name="filter"><button class="filterBtn" type="submit">Buscar</button>
+    </form>
+    <p class="not-filtering">Buscando por: {{ filter }}</p>
+
+    <section class="recipe-container">
+
+        {% for recipe in recipes %}
+        <div>
+            <img src="{{ recipe.path }}">
+            <h1>{{ recipe.title}}</h1>
+            <p>{{ recipe.author }}</p>
+            <a href="/admin/show/{{ recipe.id }}">Visualizar</a>
+        </div>
+        {% endfor %}
+
+    <div class="pagination" data-page={{ pagination.page }} data-total={{ pagination.total }} data-filter={{ filter }}></div>
+
+    </section>
+
+    <div class="paginate">
+        
+    </div>
+
+    <script src="/scriptsFilter.js"></script>
+
+{% endblock content %}

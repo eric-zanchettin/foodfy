@@ -1,0 +1,95 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <form method="POST" action="/admin/edit?_method=PUT" enctype="multipart/form-data">
+        <div class="item-container">
+            <section class="img" style="background: url({{ files[0].src }}) no-repeat center center / cover;">
+            </section>
+            
+            <section>
+            <div class="item">
+
+                <h1>Nome da Receita</h1>
+                <input value="{{ recipe.title }}" placeholder="Ex: Macarrão à Bolonhesa ..." type="text" name="title" />
+
+                <h1>Imagens</h1>
+                <div>
+                    <div class="photos-upload">
+                        <input type="file" accept="image/*" name="photos" id="photos-input" multiple onchange="photosUpload.handleFileInput(event)">
+                        <p>Selecione até 5 Fotos</p>
+                    </div>
+
+                    <div class="photos-preview">
+                        {% if files %}
+                            {% for file in files %}
+                                <div class="photos" id="{{ file.id }}">
+                                    <img src="{{ file.src }}" alt="{{ file.name }}">
+                                    <i class="material-icons" onclick="photosUpload.removeOldPhotos()">close</i>
+                                </div>
+                            {% endfor %}
+                            <input type="hidden" name="removed_files" />
+                            <input type="hidden" name="files_length" value="{{ files.length }}" />
+                        {% endif %}
+                    </div>
+                </div>
+
+                <h1>Ingredientes</h1>
+                {% for ingredient in recipe.ingredients %}
+                    {% if ingredient != "" %}
+                        <div class="ingItem">
+                            <span>{{ ingredient }}</span><span>X</span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <input id="ing" placeholder="Para cada ingrediente, clique em '+' ..." type="text" /><a class="add">+</a>
+                <input value="{{ recipe.ingredients }}" id="ingArr" type="hidden" name="ingredients[]" />
+                <span class="actualHidden"></span>
+
+                <h1>Modo de Preparo</h1>
+                {% for preparation in recipe.preparation %}
+                    {% if preparation != "" %}
+                        <div class="prepItem">
+                            <span>{{ preparation }}</span><span>X</span>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <input id="prep" placeholder="Para cada etapa de preparo, clique em '+' ..." type="text" /><a class="add">+</a>
+                <input value="{{ recipe.preparation }}" id="prepArr" type="hidden" name="preparation[]" />
+                <span class="actualHidden"></span>
+
+                <h1>Informações Adicionais</h1>
+                <input value="{{ recipe.information }}" placeholder="Observações, informações, adendos etc ..." type="text" name="information" />
+
+                <input value="{{ recipe.id }}" type="hidden" name="id">
+
+                <button type="submit">Enviar</button>
+
+            </div>
+
+            </section>
+        </div>
+    </form>
+
+                <form class="item-delete" method="POST" action="/admin/edit?_method=DELETE">
+
+                    <button type="sumbit">Deletar</button>
+                    <input value="{{ recipe.id }}" type="hidden" name="id">
+
+                </form>
+
+    <script>
+
+        const deleteBtn = document.querySelector('.item-delete');
+        deleteBtn.addEventListener('click', (event) => {
+            const confirmation = confirm('Tem certeza de que deseja deletar esta receita?');
+            if (!confirmation) {
+                event.preventDefault();
+            };
+        });
+
+    </script>
+    <script src="/scriptsCreate.js"></script>
+    <script src="/scriptsImage.js"></script>
+
+{% endblock content %}

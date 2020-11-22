@@ -1,0 +1,26 @@
+<div class="fieldsRegister">
+    
+    <div class="registerHeader">
+        <h1>Cadastrar novo Usuário</h1>
+        <div class="btn">
+            <button type="submit">Salvar</a>
+        </div>
+    </div>
+
+    <div class="titles">
+        <p>Nome</p>
+        <p>E-mail</p>
+    </div>
+
+    <div class="fieldRegister">
+
+        <input class="separate" type="text" name="name" placeholder="Digite o nome do Usuário ..." value="{{ fields.name }}">
+        <input class="separate" type="email" name="email" placeholder="Digite o E-mail ..." value="{{ fields.email }}">
+
+    </div>
+
+    <div class="isAdmin">
+        <input type="checkbox" name="isAdmin" id="isAdmin" {% if fields.isAdmin %} checked {% endif %} ><label for="isAdmin">Administrador</label>
+    </div>
+
+</div>

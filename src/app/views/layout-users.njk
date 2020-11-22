@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    {% include "parts/messages.njk" %}
+
+    {% block head %}
+        <title>Foodfy</title>
+    {% endblock %}
+
+    {% include "parts/styles.njk" %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodfy</title>
+</head>
+<body>
+
+    <div class="usersFoodfy">
+        <a href="/"><img src="https://i.imgur.com/i7stcXt.png" /></a>
+    </div>
+
+    {% block content %}
+        
+    {% endblock %}
+
+    <script src="/scripts.js"></script>
+
+</body>
+</html>

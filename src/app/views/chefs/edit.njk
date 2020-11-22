@@ -1,0 +1,53 @@
+{% extends "layout.njk" %}
+
+{% block head %}
+
+    <title>Foodfy - Editando Chef</title>
+
+{% endblock head %}
+
+{% block content %}
+
+<div>
+
+    <form class="chef-delete" method="POST" action="/chefs/edit?_method=DELETE">
+            <button type="submit">Deletar Chef</button>
+            <input value="{{ chef.id }}" type="hidden" name="id">
+    </form>
+
+        <form method="POST" action="/chefs/edit?_method=PUT" enctype="multipart/form-data">
+            <div class="register-container">
+                <div class="save-chef">
+                    <h1>Editando Chef</h1>
+                    <button type="submit">Salvar Chef</button>
+                </div>
+
+                <h2>🧾 Nome</h2>
+                <input value="{{ chef.name }}" type="text" name="name" id="name" />
+
+                <h2>🖼️ Imagem do Avatar</h2>
+                <div>
+                    <div class="avatar-upload">
+                        <input type="file" name="avatar" id="avatar-input" accept="images/*" onchange="avatarUpload.handleInput(event)" />
+                        <p>Selecione uma Foto de Perfil</p>
+                    </div>
+
+                    <div class="avatar-preview">
+                        {% if avatar %}
+                            <div class="avatarPhoto">
+                                <img src="{{ avatar.path }}" alt="Imagem de {{ chef.name }}">
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+
+                <input type="hidden" name="id" value="{{ chef.id }}" />
+            
+            </div>
+    </form>
+
+</div>
+
+<script src="/scriptsImage.js"></script>
+
+{% endblock content %}

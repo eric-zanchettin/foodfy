@@ -1,0 +1,24 @@
+<div class="fields">
+    <div>
+        <h1>Editando: {{ userEdit.name }}</h1>
+
+        <p>Nome</p>
+        <input type="text" name="name" value="{{ userEdit.name }}" placeholder="Digite o seu Nome ... " />
+
+        <div>
+            <p>Email</p>
+            <input type="email" name="email" value="{{ userEdit.email }}" placeholder="Digite seu E-mail ... " onblur="validateEmail.validate(value)" />
+        </div>
+
+        <p>Senha</p>
+        <input type="password" name="password" placeholder="Digite a Senha ..." />
+
+        <div class="isAdminEdit">
+            <input type="checkbox" name="isAdmin" id="isAdmin" {% if userEdit.is_admin %} checked {% endif %} ><label for="isAdmin">Administrador</label>
+        </div>
+
+        <input type="hidden" name="id" value="{{ userEdit.id }}">
+
+        <button class="button" type="submit">Salvar</button>
+    </div>
+</div>

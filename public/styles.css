@@ -1,0 +1,775 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --prim-color: #FBDFDB;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: 'Roboto-Regular', sans-serif ;
+}
+
+h1 {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 32px;
+}
+
+img {
+    padding-left: 291px;
+    padding-top: 36.1px;
+    padding-right: 122.4px;
+}
+
+header a {
+    margin: 30px 36px 38px 30px;
+    font-size: 16pt;
+    color: black;
+    text-decoration: none;
+}
+
+#rectangle {
+    padding: 117px 400px 60px 60px;
+    background-color: var(--prim-color);
+    height: 220px;
+    width: 540px;
+    margin: 0 auto;
+    margin-top: 36px;
+    border-radius: 30px;
+}
+
+#rectangle h1 {
+    width: 100%;
+    padding-bottom: 10px;
+    max-width: 400px;
+}
+
+#rectangle p {
+    width: 80%;
+    max-width: 300px;
+    font-size: 18px;
+}
+
+#chef {
+    position: relative;
+    left: 320px;
+    bottom: 170px;
+}
+
+#top {
+    margin: 70px 0px 0px 310px;
+}
+
+#grid-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    width: 50%;
+}
+
+.cards {
+    cursor: pointer;
+}
+
+.cards img {
+    padding: 20px 0px 0px 0px;
+    width: 400px;
+    border-radius: 50px 50px 30px 30px;
+    margin: 0 auto;
+}
+
+.cards h1 {
+    padding-top: 10px;
+    font-size: 18pt;
+}
+
+.cards p {
+    font-size: 14pt;
+    color: gray;
+    padding: 3px;
+}
+
+footer div {
+    margin-top: 50px;
+    padding: 60px 0px 50px 0px;
+    text-align: center;
+    background-color: #EEEEEE;
+}
+
+footer div p {
+    color: #999999;
+}
+
+#about {
+    padding: 10px 0px 0px 280px;
+}
+
+#about h1 {
+    font-size: 24px;
+    padding: 50px 0px 20px 0px;
+}
+
+#about p {
+    font-size: 18px;
+    color: #444444;
+    line-height: 28px;
+    max-width: 1200px;
+}
+
+.modal-overlay {
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.7);
+    top: 0;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal {
+    margin: 220px 0px 0px 550px;
+    width: 750px;
+    height: 500px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255);
+    text-align: center;
+}
+
+.modal img {
+    padding: 20px 0px 0px 0px;
+    width: 500px;
+    height: 220px;
+    border-radius: 50px 50px 30px 30px;
+    margin: 0 auto;
+}
+
+.modal p {
+    margin-top: 10px;
+    font-size: 18px;
+    color: #777777;
+}
+
+.modal i {
+    margin: 125px 0px 0px 0px;
+    cursor: pointer;
+}
+
+.recInfo {
+    text-align: center;
+}
+
+.recInfo ul {
+    margin-bottom: 30px;
+}
+
+.recInfo li {
+    font-family: 'Roboto-Regular', sans-serif;
+    color: #777777;
+}
+
+.recInfo button {
+    font-family: 'Roboto-Bold', sans-serif;
+    margin-bottom: 30px;
+    color: #777777;
+}
+
+.recInfo h1 {
+    margin-top: 30px;
+    font-size: 28pt;
+}
+
+.recInfo p {
+    max-width: 500px;
+    color: #444444;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+ul {
+    text-align: center;
+}
+
+.item-container section.img {
+    background: url('https://source.unsplash.com/collection/1986814/500x500') no-repeat center center / cover;
+    border-radius: 12% 0% 0% 12%;
+}
+
+div.item-container {
+    display: grid;
+    grid-template-columns: 40% 1fr;
+    width: 800px;
+    height: auto;
+    margin: 32px auto;
+    background-color: var(--prim-color);
+    border-radius: 10%;
+}
+
+div.item {
+    margin: 32px auto auto 32px;
+    width: auto;
+    height: 100%;
+}
+
+div.item h1 {
+    font-size: 25px;
+    color: #ff9c8b;
+}
+
+div.item input {
+    margin: 16px 0px 16px 0px;
+    width: 85%;
+    height: 4%;
+    padding: 4px;
+}
+
+div.item p {
+    margin: 16px 0px 16px 0px;
+}
+
+a.add {
+    text-align: center;
+    font-weight: bolder;
+    background-color: #ff9c8b;
+    width: 20px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.item button {
+    margin: 20px 0px 20px 0px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: #ff9c8b;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 30%;
+    height: 30px;
+}
+
+.item-delete button {
+    position: relative;
+    left: 890px;
+    font-size: 16px;
+    font-weight: bolder;
+    background-color: rgba(233, 57, 57, 0.836);
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    width: 100px;
+    height: 20px;
+}
+
+div#editBtn {
+    background-color: #ff9c8b;
+    width: 30%;
+    height: 30px;
+    text-align: center;
+    border-radius: 20px;
+    margin: 50px 0px 20px 115px;
+}
+
+div#editBtn a {
+    text-decoration: none;
+    color: white;
+    position: relative;
+    top: 6px;
+    font-weight: bolder;
+}
+
+.delBtn {
+    color: rgb(255, 71, 71);
+    background-color: rgba(0, 0, 0, 0);
+    
+    font-weight: bolder;
+    font-family: Roboto;
+    font-size: 10.5pt;
+}
+
+div.prepItem,
+div.ingItem {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    border: 1.5px dotted var(--prim-color);
+    background-color: #ff9c8b;
+    width: 25%;
+    text-align: center;
+    margin: 5px 0px 5px 0px;
+    border-radius: 10px;
+    color: white;
+}
+
+div.prepItem {
+    grid-template-columns: 94% 6%;
+    width: 90%;
+}
+
+div.prepItem span:nth-child(2),
+div.ingItem span:nth-child(2) {
+    border-left: 1.5px solid var(--prim-color);
+    cursor: pointer;
+}
+
+#newRec {
+    display: inline-block;
+    background-color: #ff9c8b;
+    margin: 40px 0px 0px 810px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#newRec a {
+    display: inline-block;
+    margin: 16px 0px 0px 11px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+#newChef {
+    display: inline-block;
+    background-color: #ff9c8b;
+    margin: 40px 0px 25px 810px;
+    width: 200px;
+    height: 50px;
+    border-radius: 50px;
+}
+
+#newChef a {
+    display: inline-block;
+    margin: 16px 0px 0px 11px;
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+    padding-left: 8px;
+}
+
+.recipe-container {
+    display: grid;
+    grid-template-columns: 35% 65%;
+}
+
+.recipe-container div {
+    margin: 50px 0px 0px 380px;
+}
+
+.recipe-container img {
+    margin: 0;
+    padding: 0;
+    border-radius: 50px;
+    width: 400px;
+    height: 200px;
+
+    object-fit: contain;
+}
+
+.recipe-container h1 {
+    font-size: 20pt;
+}
+
+.recipe-container p {
+    color: grey
+}
+
+.recipe-container a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-weight: bolder;
+    margin: 0;
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #ff9c8b;
+    border-radius: 20px;
+}
+
+@keyframes typoHidden {
+    0% {color: rgba(0, 0, 0, 1)}
+    100% {color: rgba(0, 0, 0, 0)}
+}
+
+.actualHidden {
+    visibility: hidden;
+}
+
+.typoHidden {
+    animation: typoHidden 5s;
+    animation-fill-mode: forwards;
+}
+
+.list-chef {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    align-items: center;
+}
+
+.chef-container {
+    display: grid;
+    grid-template-columns: 30% 60% 10%;
+    align-items: center;
+    margin: 20px 50px 20px 50px;
+    background-color: #EEEEEE;
+    padding: 10px 10px 10px 20px;
+    border-radius: 80px;
+}
+
+.chef-container h1 {
+    font-size: 18px;
+}
+
+.chef-container span {
+    display: block;
+    width: 64px;
+    height: 64px;
+    background-position: center;
+    background-size: cover;
+    border-radius: 200px;
+}
+
+.chef-container p {
+    background-color: rgba(202, 5, 5, 0.795);
+    border-radius: 10px;
+    width: auto;
+    text-align: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.register-container {
+    padding: 20px;
+    margin: 50px auto;
+    background-color: #EEEEEE;
+    width: 50%;
+}
+
+.register-container h1 {
+    font-size: 24pt;
+    margin-bottom: 20px;
+}
+
+.register-container h2 {
+    font-size: 20pt;
+    margin-bottom: 10px;
+}
+
+.register-container input {
+    width: 100%;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #999999;
+    margin: 0px 0px 20px 0px;
+    font-size: 16pt;
+}
+
+.save-chef {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+}
+
+.save-chef button {
+    background-color: rgb(102, 23, 109);
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    font-weight: bolder;
+    color: white;
+}
+
+.chef-details {
+
+    margin: 50px 100px 50px 100px;
+}
+
+.chef-details div.chef-nameBtn {
+    display: grid;
+    grid-template-columns: 90% 10%;
+    align-items: center;
+    margin: 50px auto;
+    padding: 20px;
+    width: 80%;
+    height: auto;
+}
+
+.chef-details div.chef-nameBtn a {
+    text-decoration: none;
+    background-color: rgb(102, 23, 109);
+    color: white;
+    width: auto;
+    height: 30px;
+    text-align: center;
+    padding-top: 10px;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.chef-information {
+    margin: 50px;
+    text-align: center;
+}
+
+.chef-information p {
+    color: #999999;
+}
+
+.chef-information img {
+    border-radius: 600px;
+    padding: 0;
+    width: 300px;
+    height: 300px;
+}
+
+.chef-recipes {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.chef-recipes img {
+    padding: 0;
+    width: 240px;
+    height: 150px;
+    border-radius: 30px;
+
+    object-fit: contain;
+}
+
+div#grid {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 280px 280px;
+    align-items: center;
+}
+
+div#grid h2, p, a {
+    margin: 10px 0px;
+}
+
+div#grid h2 {
+    font-weight: normal;
+}
+
+div#grid p {
+    color: #999999;
+}
+
+div#grid a {
+    transition-duration: 1s;
+    text-decoration: none;
+    font-weight: bolder;
+    color: rebeccapurple;
+}
+
+div#grid a:hover {
+    transition-duration: 1s;
+    text-decoration: underline;
+    color: rgb(255, 163, 179);
+}
+
+.chef-delete {
+    margin: 50px 0px 0px 900px;
+}
+
+.chef-delete button {
+    background-color: rgb(221, 83, 83);
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+    font-weight: bolder;
+}
+
+.filter {
+    margin: 20px 25px 0px 0px;
+    text-align: center;
+}
+
+.filter-input {
+    border: 1px solid #999999;
+    height: 30px;
+    margin-right: 10px
+}
+
+.filterBtn {
+    background-color: rgb(102, 23, 109);
+    font-weight: bolder;
+    color: white;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.not-filtering {
+    visibility: hidden;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.filtering {
+    visibility: visible;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.paginate {
+    margin: 50px 0px 0px 0px;
+    text-align: center;
+}
+
+.paginate a {
+    font-weight: bolder;
+    padding: 8px;
+    color: white;
+    background-color: #ff9c8b;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+form .item .photos-upload {
+    position: relative;
+    
+    display: block;
+    overflow: hidden;
+
+    width: 200px;
+}
+
+form .item .photos-upload p {
+    padding: 16px 16px 16px 0px;
+    border-radius: 4px;
+    box-shadow: 0 2px 2px -6px #333333;
+    background-color: rgb(161, 230, 84);
+    color: black;
+    font-weight: bold;
+
+    width: 100%;
+    text-align: center;
+
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+form .item #photos-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+    
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    cursor: pointer;
+}
+
+.item .photos-preview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 8px;
+    width: 90%;
+    margin: 8px 0;
+}
+
+
+.photos img {
+    padding: 0;
+    margin: 0;
+    border: 0;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.photos {
+    position: relative;
+}
+
+.photos i {
+    position: absolute;
+
+    color: red;
+    top: 0;
+    left: 0;
+
+    font-size: 500%;
+
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    transition: opacity 500ms;
+
+    opacity: 0;
+}
+
+.photos i:hover {
+    opacity: 1;
+
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.avatar-upload {
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+}
+
+#avatar-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    overflow: hidden;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0;
+}
+
+.avatar-upload p {
+    padding: 16px 16px 16px 0px;
+
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: bolder;
+
+    background-color: rgb(161, 230, 84);
+    border-radius: 20px;
+    box-shadow: 0px 5px 5px -6px #333333;
+
+    text-transform: uppercase;
+}
+
+.avatar-preview {
+    text-align: center;
+}
+
+.avatarPhoto img {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    max-width: 600px;
+    max-height: 400px;
+}

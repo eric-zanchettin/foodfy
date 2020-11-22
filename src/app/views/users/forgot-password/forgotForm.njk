@@ -1,0 +1,15 @@
+{% extends "layout-users.njk" %}
+
+{% block content %}
+
+    <section>
+
+        <form method="POST" action="/users/forgot-password">
+            
+            {% include "users/forgot-password/fields.njk" %}
+
+        </form>
+
+    </section>
+
+{% endblock %}

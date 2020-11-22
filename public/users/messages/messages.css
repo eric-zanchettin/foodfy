@@ -1,0 +1,45 @@
+div.error {
+    position: absolute;
+    padding: 16px;
+    top: 0;
+
+    width: 100%;
+
+    background: rgb(248, 79, 79);
+    color: white;
+
+    text-align: center;
+
+    visibility: initial;
+    opacity: 1;
+
+    animation: errorMessage 5s 4s forwards;
+}
+
+@keyframes errorMessage {
+    from {top: 0px; visibility: initial; opacity: 1;}
+    to {top: -200px; visibility: hidden; opacity: 0;}
+}
+
+div.success {
+    position: absolute;
+    padding: 16px;
+    top: 0;
+
+    width: 100%;
+
+    background: rgb(38, 231, 96);
+    color: white;
+
+    text-align: center;
+
+    visibility: initial;
+    opacity: 1;
+
+    animation: successMessage 5s 4s forwards;
+}
+
+@keyframes successMessage {
+    from {top: 0px}
+    to {top: -200px; visibility: hidden; opacity: 0;}
+}

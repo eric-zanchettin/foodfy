@@ -1,0 +1,134 @@
+header div.userHeader {
+    padding: 28px;
+    background: #111111;
+}
+
+ul.userNav {
+    list-style: none;
+
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+}
+
+ul.userNav li a {
+    color: white;
+    font-family: Roboto;
+
+    margin: 0px 100px 0px 0px;
+}
+
+ul.userNav li:last-child {
+    margin: 0px 0px 0px 620px;
+    font-weight: bolder;
+}
+
+ul.userNav li.selected {
+    font-weight: bolder;
+}
+
+img.userLogo {
+    margin: 0px 0px 0px 120px;
+    border: 0;
+    padding: 0;
+
+    filter: invert(100%);
+}
+
+div.fields h1 {
+    margin-bottom: 60px;
+}
+
+button.logout {
+    font-family: Roboto;
+    font-size: 16pt;
+    font-weight: bolder;
+    color: white;
+
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+
+    background: none;
+    
+    cursor: pointer;
+}
+
+div.userTitle {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+
+    text-align: center;
+    margin: 80px auto;
+}
+
+div.userList {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    justify-items: center;
+
+    margin: 0px 0px 0px 140px;
+}
+
+div.userField {
+    margin-bottom: 64px;
+}
+
+div.userField h1 {
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+
+    margin-bottom: 4px;
+}
+
+
+div.userField p, a {
+    margin: 0px 0px 16px 0px;
+}
+
+div.userField p {
+    color: rgb(150, 150, 150);
+}
+
+a.newBtn {
+    padding: 12px 64px;
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 0px 24px 0px 0px;
+
+    color: white;
+    background: #6558c3;
+    border-radius: 12px;
+}
+
+a.editBtn {
+    font-weight: bolder;
+    text-decoration: none;
+    margin: 0px 24px 0px 0px;
+
+    color: #6558c3;
+}
+
+a.delBtn {
+    font-weight: bolder;
+    text-decoration: none;
+
+    color: rgb(248, 79, 79);
+}
+
+.isAdminEdit {
+    display: inline-flex;
+    margin-top: 20px;
+    font-weight: bold;
+
+    width: 18%;
+}
+
+button.button {
+    margin: 80px 670px;
+}

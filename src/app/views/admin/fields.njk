@@ -1,0 +1,51 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <form method="POST" action="/admin" enctype="multipart/form-data">
+        <div class="item-container">
+            <section class="img">
+            </section>
+            
+            <section>
+            <div class="item">
+
+                <h1>Nome da Receita</h1>
+                <input placeholder="Ex: Macarrão à Bolonhesa ..." type="text" name="title" />
+
+                <div>
+                    <h1>Imagens</h1>
+                </div>
+                
+                <div>
+                    <div class="photos-upload">
+                        <input type="file" accept="image/*" name="photos" id="photos-input" multiple onchange="photosUpload.handleFileInput(event)">
+                        <p>Selecione até 5 Fotos</p>
+                    </div>
+
+                    <div class="photos-preview">
+
+                    </div>
+                </div>
+
+                <h1>Ingredientes</h1>
+                <input id="ing" placeholder="Para cada ingrediente, clique em '+' ..." type="text" /><a class="add">+</a>
+                <input id="ingArr" type="hidden" name="ingredients[]" />
+                <span class="actualHidden"></span>
+
+                <h1>Modo de Preparo</h1>
+                <input id="prep" placeholder="Para cada etapa de preparo, clique em '+' ..." type="text" /><a class="add">+</a>
+                <input id="prepArr" type="hidden" name="preparation[]" />
+                <span class="actualHidden"></span>
+
+                <h1>Informações Adicionais</h1>
+                <input placeholder="Observações, informações, adendos etc ..." type="text" name="information" />
+
+                <button type="submit" >Enviar</button>
+
+            </div>
+            </section>
+        </div>
+    </form>
+
+{% endblock content %}

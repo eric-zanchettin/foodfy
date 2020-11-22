@@ -1,0 +1,33 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+
+    <form method="POST" action="/chefs" enctype="multipart/form-data">
+        <div class="register-container">
+
+            <div class="save-chef">
+                <h1>Registrando novo Chef</h1>
+                <button type="submit">Salvar Chef</button>
+            </div>
+
+            <h2>🧾 Nome</h2>
+            <input type="text" name="name" id="name" />
+
+            <h2>🖼️ Imagem do Avatar</h2>
+            <div>
+                <div class="avatar-upload">
+                    <input type="file" name="avatar" id="avatar-input" accept="images/*" onchange="avatarUpload.handleInput(event)" />
+                    <p>Selecione uma Foto de Perfil</p>
+                </div>
+
+                <div class="avatar-preview">
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    <script src="/scriptsImage.js"></script>
+
+{% endblock content %}
