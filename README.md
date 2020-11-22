@@ -1,4 +1,7 @@
-<h1>👨🏼‍🍳 Foodfy - Desafio Final</h1>
+<p align="center">
+  <img width="64" height="auto" src="https://i.imgur.com/6uDjYpu.png" />
+</p>
+<h1 align="center">👨🏼‍🍳 Foodfy - Desafio Final</h1>
 
 <h2>📜 Introdução</h2>
 <p>Foodfy é uma Aplicação Web que foi desenvolvida durante o Bootcamp Launchstore da Rocketseat e foi escolhida como o projeto
@@ -35,7 +38,7 @@ deste arquivo.</p>
 <p>O projeto ficará hospedado e poderá ser acessado pelo endereço: http://localhost:3000<p>
 <h4>❗ Considerações Finais:</h4>
 <ul>
-    <li>O Banco de Dados deve ser mantido com o nome de "foodfy";<li>
+    <li>O Banco de Dados deve ser mantido com o nome de "foodfy";</li>
     <li>Não esqueça de mudar as credencias do Banco de Dados para as configuradas em seu computador, isso pode ser alterado pelo arquivo db.js
     localizado no diretório: config/db.js</li>
     <li>O projeto conta com um sistema simples de envio de E-mail, usando o mailtrap, portanto, também lembre-se de configurar o mesmo com o usuário e senha
@@ -49,5 +52,8 @@ o "seeds.js" para popular as tabelas com informações aleatórias que são gera
 <code>node seeds.js</code>
 <p>Na raíz do projeto para que o seeder preencha as tabelas.</p>
 
+<p align="center">
+  <img width="64" height="auto" src="https://i.imgur.com/1BZZqy0.png" />
+</p>
 <p>O que é o Bootcamp Launchstore da Rocketseat?</p>
 <p>Rocketseat Launchbase é um Bootcamp com propósito de levar a carreira/conhecimento dos participantes para o próximo nível indo diretamente ao ponto chave da programação: CODAR! É uma maneira incrível de dar seus primeiros passos na programação e também uma ótima maneira de expandir seus conhecimentos em programação. Se você quiser saber mais sobre a instituição, sinta-se à vontade de checar o GitHub da Rocketseat também.</p>
