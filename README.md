@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="64" height="auto" src="https://i.imgur.com/6uDjYpu.png" />
+  <img width="128" height="auto" src="https://i.imgur.com/6uDjYpu.png" />
 </p>
 <h1 align="center">👨🏼‍🍳 Foodfy - Desafio Final</h1>
 
