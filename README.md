@@ -56,4 +56,4 @@ o "seeds.js" para popular as tabelas com informações aleatórias que são gera
   <img width="64" height="auto" src="https://i.imgur.com/1BZZqy0.png" />
 </p>
 <p>O que é o Bootcamp Launchstore da Rocketseat?</p>
-<p>Rocketseat Launchbase é um Bootcamp com propósito de levar a carreira/conhecimento dos participantes para o próximo nível indo diretamente ao ponto chave da programação: CODAR! É uma maneira incrível de dar seus primeiros passos na programação e também uma ótima maneira de expandir seus conhecimentos em programação. Se você quiser saber mais sobre a instituição, sinta-se à vontade de checar o GitHub da Rocketseat também.</p>
+<p>Rocketseat Launchbase é um Bootcamp com propósito de levar a carreira/conhecimento dos participantes para o próximo nível indo diretamente ao ponto chave da programação: CODAR! É uma maneira incrível de dar seus primeiros passos na programação e também uma ótima maneira de expandir seus conhecimentos em programação. Se você quiser saber mais sobre a instituição, sinta-se à vontade de checar o GitHub da <a href="https://github.com/Rocketseat">Rocketseat</a> também.</p>
